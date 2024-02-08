@@ -91,3 +91,39 @@ const perguntas = [
     }
 ];
 
+// Para selecionar a div com o ID='quiz' 
+const quiz = document.querySelector('#quiz')
+
+// querySelector é uma função de pesquisa de seletores (tags, classes e ids)
+const template = document.querySelector('template')
+
+
+
+// loop
+for (let item of perguntas) {
+
+    // cloneNode é uma função que vai clonar um nó (tags), se tiver TRUE dentro dos parenteses, clona tudo que estiver dentro dessa tag (filhos)
+    const quizItem = template.content.cloneNode(true)
+
+    // Para colocar cada pergunta
+    quizItem.querySelector('h2').textContent = item.pergunta
+
+    for (let resposta of item.respostas){
+
+        //Para clonar o padrão para respostas
+        const subItem = quizItem.querySelector('dl dt').cloneNode(true)
+
+        // Para mudar o texto da resposta
+        subItem.querySelector('span').textContent = resposta
+
+        // Para adicionar a resposta na tela
+        quizItem.querySelector('dl').appendChild(subItem)
+    }
+
+    // Para remover o template "Resposta A"
+    quizItem.querySelector('dl dt').remove()
+
+
+    // appendChild é uma função para colocar um filho, está colocando a pergunta na tela
+    quiz.appendChild(quizItem)
+}

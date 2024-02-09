@@ -165,10 +165,10 @@ for (let item of perguntas) {
         dt.querySelector('label').textContent = resposta
         
         // Para mudar o for do label (Associar o FOR com o ID)
-        dt.querySelector('label').setAttribute('for', 'pergunta-' + perguntas.indexOf(item) + '-resposta-' + item.respostas.indexOf(resposta))
+        dt.querySelector('label').setAttribute('for', `pergunta-${perguntas.indexOf(item)}-resposta-${item.respostas.indexOf(resposta)}`)
 
         // Para mudar o id do input (Associar o FOR com o ID)
-        dt.querySelector('input').setAttribute('id', 'pergunta-' + perguntas.indexOf(item) + '-resposta-' + item.respostas.indexOf(resposta))
+        dt.querySelector('input').setAttribute('id', `pergunta-${perguntas.indexOf(item)}-resposta-${item.respostas.indexOf(resposta)}`)
 
         // Para mudar a referência (atributo name) de cada resposta
         dt.querySelector('input').setAttribute('name', 'pergunta-' + perguntas.indexOf(item))
@@ -188,7 +188,7 @@ for (let item of perguntas) {
                 corretas.add(item)
             }
             // Para atualizar o número de acertos
-            mostrarAcertos.textContent = corretas.size + ' de ' + totalDePerguntas
+            mostrarAcertos.textContent = ` ${corretas.size} de ${totalDePerguntas}`
         }
 
         // Para adicionar a resposta na tela

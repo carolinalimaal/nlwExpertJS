@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Quiz</title>
 </head>
 <body>
-    <h1>Teste seus conhecimentos</h1>
-
+    <h1>RetroGame Quiz</h1>
+    <h2>Teste seus conhecimentos sobre a História dos Videogames</h2>
+    <p>Bem-vindo ao Quiz sobre História dos Videogames! Este quiz testará seus conhecimentos sobre a fascinante jornada dos videogames, desde seus primeiros passos até os marcos mais significativos da indústria. Prepare-se para mergulhar em uma viagem através do tempo, explorando os consoles, os jogos e as inovações que moldaram a cultura dos videogames ao longo das décadas. Desafie-se e descubra o quanto você sabe sobre a evolução desta forma de entretenimento que cativa milhões de pessoas em todo o mundo. Vamos começar e divirta-se! </p>
     <div id="quiz"></div>
 
     <template>
         <div class="quiz-item">
-            <h2>
-                Pergunta 01
-            </h2>
+            <h3>
+                Pergunta 
+            </h3>
             <dl>
                 <dt>
-                    <input type="radio" name="resposta" value="0">
-                    <span>
-                        Resposta A
-                    </span>
+                    <input type="radio" id="pergunta-resposta" name="resposta" value="0">
+                    <label for="pergunta-resposta">
+                        Resposta 
+                    </label>
                 </dt>
             </dl>
         </div>
     </template>
     
+    <div id="acertos">
+        <p>Acertos:</p>
+        <span></span>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -53,6 +53,8 @@ function displayQuestion() {
     for (option of currentQuizData.options) {
         // Para criar o elemento botão
         const optionBtn = document.createElement('button')
+        // Para atribuir um ID
+        optionBtn.id = 'option'
         // Para adicionar uma classe CSS para estilizar depois
         optionBtn.classList.add('optionBtn')
         // Para adicionar ação ao botão
@@ -71,12 +73,14 @@ function selectOption(event) {
     // Para pegar o valor da opção selecionada
     const selectedOption = event.target.value
 
+    disableOptions()
+
     if (selectedOption == quizData[currentQuestion].correct) {
         score++
-        feedbackElement.innerText = 'Correct!'
+        feedbackElement.innerText = 'CORRECT!'
         feedbackElement.classList.add('mensage-feedback-correct')
     } else {
-        feedbackElement.innerText = 'Wrong!'
+        feedbackElement.innerText = 'WRONG!'
         feedbackElement.classList.add('mensage-feedback-wrong')
     }
     currentQuestion++
@@ -89,10 +93,32 @@ function selectOption(event) {
 
     } else {
         nextElement.addEventListener('click', () => {
-            quizContainer.innerHTML = `<h2 class="score"> YOUR SCORE ${score} / ${totalQuestions}</h2> <button class="restartBtn">RESTART</button>`
-            
+            quizContainer.innerHTML = ''
+
+            const yourScore = document.createElement('h2')
+            yourScore.classList.add('score')
+            yourScore.textContent = `YOUR SCORE ${score} / ${totalQuestions}`
+
+            const resertBtn = document.createElement('button')
+            resertBtn.classList.add('restartBtn')
+            resertBtn.textContent = 'RESTART'
+
+            quizContainer.appendChild(yourScore)
+            quizContainer.appendChild(resertBtn)
         })
     }
 }
+
+function disableOptions() {
+    const optionBtn = document.querySelectorAll('#option')
+    for (item of optionBtn){
+        item.setAttribute('disabled', '')
+    }
+}
+
+function reloadQuiz() {
+    location.reload();
+}
+
 
 displayQuestion()

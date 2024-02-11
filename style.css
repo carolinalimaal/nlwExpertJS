@@ -6,12 +6,11 @@
     --amarelo: #FFC567;
     --azul: #058CD7;
     --vermelho: #FD5A46;
-    /*font-family: 'Luckiest Guy', cursive;
-font-family: 'Press Start 2P', system-ui;
-font-family: 'VT323', monospace;*/
 
+    /*
+    font-family: 'Press Start 2P', system-ui;
+    */
 }
-
 
 
 
@@ -167,6 +166,9 @@ header p{
     font-size: 45px;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
+
+/*--------------FOOTER-------------*/
+
 
 footer p{
     position: fixed;

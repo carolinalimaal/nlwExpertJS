@@ -2,6 +2,9 @@
 
 O projeto RetroGame Quiz foi feito para implementar minhas habilidades em HTML5, CSS3 e JavaScript em um projeto prático.
 
+![Logo do RetroGame Quiz](./imgs/screenshot-retrogameQuiz.png)
+
+
 ### 🚀 Status
 
 - Finalizado ✅

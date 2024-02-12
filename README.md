@@ -1,7 +1,7 @@
 # RetroGame Quiz
 
 O projeto RetroGame Quiz foi feito para implementar minhas habilidades em HTML5, CSS3 e JavaScript em um projeto prático.
-<img src="./imgs/screenshot-retrogameQuiz.png" alt="Logo do RetroGame Quiz" align="center">
+<img src="./imgs/Captura de tela 2024-02-12 202021.jpg" alt="Logo do RetroGame Quiz">
 ![Logo do RetroGame Quiz](./imgs/screenshot-retrogameQuiz.png)
 
 

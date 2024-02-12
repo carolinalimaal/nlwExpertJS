@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen&display=swap');
 
 :root{
-    --cinza: rgb(71, 71, 69);
-    --verde: rgb(0, 153, 94);
+    --cinza: #474745;
+    --verde: #00995e;
     --amarelo: #FFC567;
     --azul: #058CD7;
     --vermelho: #FD5A46;
@@ -18,6 +18,7 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 62.5%;
     box-sizing: border-box;
 }
 
@@ -47,7 +48,7 @@ header h1{
     color: var(--amarelo);
     font-family: 'Press Start 2P', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: italic;
-    font-size: 40px;
+    font-size: 4rem;
     letter-spacing: 3px;
     text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
 }
@@ -55,17 +56,16 @@ header h1{
 header h2{
     margin: 10px 0;
     font-family: 'Silkscreen';
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 header p{
     max-width: 700px;
-    min-width: 400px;
     margin: 5px auto;
     font-family: 'Silkscreen';
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;    
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     text-align: justify;
@@ -92,6 +92,7 @@ header p{
     padding: 8px;
     border-radius: 10px;
     border: 3px solid white;
+    font-size: 1.6rem;
     font-weight: 800;
     text-align: center;
 }
@@ -103,6 +104,7 @@ header p{
     padding: 8px;
     border-radius: 10px;
     border: 3px solid white;
+    font-size: 1.6rem;
     font-weight: 800;
     text-align: center;
 }
@@ -110,7 +112,7 @@ header p{
 .question-title{
     padding: 5px;
     text-align: justify;
-    font-size: 30px;
+    font-size: 2.5rem;
 }
 
 .options-container{
@@ -128,7 +130,7 @@ header p{
     border-radius: 8px;
     border: 3px solid black;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -146,7 +148,7 @@ header p{
     border-radius: 8px;
     border: 3px solid black;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -160,14 +162,14 @@ header p{
     border-radius: 8px;
     border: 3px solid black;
     box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
-    font-size: 16px;
+    font-size: 1.8rem;
     font-weight: 500;
     cursor: pointer;
 }
 
 .score{
     margin: 35px;
-    font-size: 45px;
+    font-size: 3.8rem;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -183,11 +185,69 @@ footer p{
     background-color: var(--amarelo);
     color: black;
     text-align: center;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 
 footer p a{
     color: black;
     text-decoration: none;
+    font-size: 1.6rem;
     font-weight: 700;
+}
+
+/*--------------MEDIA-QUERIES-------------*/
+@media (max-width: 480px) {
+    header h1{
+        font-size: 2.8rem;
+    }
+    header h2{
+        font-size: 1.6rem;
+    }
+    header p{
+        font-size: 1.3rem;
+    }
+    .question-title{
+        font-size: 1.8rem;
+    }
+    .optionBtn{
+        font-size: 1.4rem;
+    }
+    .score{
+        font-size: 2.6rem;
+    }
+}
+@media (max-width:360px){
+    header{
+        width: 88%;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    header h2{
+        font-size: 1.2rem;
+    }
+    header p{
+        font-size: 1rem;
+    }
+    .mensage-feedback-correct, .mensage-feedback-wrong{
+        padding: 6px;
+        font-size: 1.2rem;
+    }
+    .question-title{
+        font-size: 1.8rem;
+    }
+    .optionBtn{
+        font-size: 1.3rem;
+    }
+    .nextBtn, .restartBtn{
+        padding: 6px;
+        font-size: 1.1rem;
+    }
+    .score{
+        font-size: 1.7rem;
+    }
+    footer p, footer p a{
+        font-size: 1.2rem;
+    }
 }

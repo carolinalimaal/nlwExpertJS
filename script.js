@@ -120,7 +120,7 @@ const quizData = [
         correct: 1
     },
     {
-        question: 'Quando foi lançado o primeiro console de videogame portátil, o Nintendo Game Boy?',
+        question: '13. Quando foi lançado o primeiro console de videogame portátil, o Nintendo Game Boy?',
         options: [
             '1980',
             '1985',

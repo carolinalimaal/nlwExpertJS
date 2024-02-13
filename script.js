@@ -169,10 +169,9 @@ function displayQuestion() {
     optionsElement.innerHTML = ''
     feedbackElement.innerHTML = ''
     
-    for (option of currentQuizData.options) {
+    for (const option of currentQuizData.options) {
         const optionBtn = document.createElement('button') // Para criar o elemento botão
 
-        optionBtn.id = 'option' // Para atribuir um ID
         optionBtn.classList.add('optionBtn') // Para adicionar uma classe CSS para estilizar depois
         optionBtn.addEventListener('click', selectOption) // Para adicionar ação ao botão
 
@@ -190,6 +189,7 @@ function selectOption(event) {
     const selectedOption = event.target.value // Para pegar o valor da opção selecionada
 
     disableOptions()
+    changeColorOptions()
 
     if (selectedOption == quizData[currentQuestion].correct) {
         score++
@@ -213,9 +213,22 @@ function selectOption(event) {
 }
 
 function disableOptions() {
-    const optionBtn = document.querySelectorAll('#option') // Seleciona todos os elementos que tem o ID 'option', retorna uma lista
-    for (item of optionBtn){
+    const optionBtn = document.querySelectorAll('.optionBtn') // Seleciona todos os elementos que tem o ID 'option', retorna uma lista
+    for (const item of optionBtn){
         item.setAttribute('disabled', '') // Desabilita todos as alternativas 
+    }
+}
+
+function changeColorOptions(){
+    const currentQuizData = quizData[currentQuestion]
+
+    const optionBtn = document.querySelectorAll('.optionBtn') // Seleciona todos os elementos que tem o ID 'option', retorna uma lista
+    for (const item of optionBtn){
+        if (item.value == currentQuizData.correct){
+            item.classList.add('correct-option')
+        } else{
+            item.classList.add('wrong-option')
+        }
     }
 }
 
